@@ -17,9 +17,9 @@
 }
 @layer base {
   :root {
-    --color-bg-base: #ffffff;
+    --color-bg-base: #f8fafc;
     --color-text-base: #1e293b;
-    --color-text-muted: #ffffff;
+    --color-text-muted: #64748b;
     --color-text-heading: #0f172a;
     --color-border-base: #e2e8f0;
 

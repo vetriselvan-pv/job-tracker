@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const AuthContext = createContext<{
   user: { [K: string]: string } | null;
   isAuthenticated: boolean;
-  login: (user: { [K: string]: string } | null) => void;
+  login: (user: { [K: string]: string } | null, token?: string) => void;
   logout: () => void;
   loading: boolean;
 } | null >( null);
@@ -24,14 +24,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setLoading(false);
   }, []);
 
-  const login = (user: { [K: string]: string } | null) => {
+  const login = (user: { [K: string]: string } | null, token?: string) => {
     setUser(user);
     localStorage.setItem("user", JSON.stringify(user));
+    if (token) {
+        localStorage.setItem("token", token);
+    }
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user");
+    localStorage.removeItem("token");
   };
   return (
     <AuthContext.Provider
