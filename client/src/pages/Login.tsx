@@ -152,9 +152,13 @@ const Login: React.FC = () => {
         
         {/* Header */}
         <div className="mb-10 text-center">
-            <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary mb-2 tracking-tight">
+            <div className="flex justify-center mb-4">
+              <img src="/logo.png" alt="Job Tracker Logo" className="w-24 h-24 object-contain" />
+            </div>
+            <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary mb-2 tracking-tight">
               Job Tracker
             </h1>
+
             <p className="text-slate-500 text-sm font-medium">
               Welcome back! Please enter your details.
             </p>

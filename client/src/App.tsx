@@ -1,5 +1,4 @@
-import "./App.css";
-import { ThemeToggle } from "./components/theme-toggle";
+import "./App.css"; 
 import FloatingMenuBar from "./components/FloatingMenuBar";
 import { Outlet } from "react-router-dom";
 
@@ -7,8 +6,7 @@ function App() {
   return (
     <>
       <Outlet />
-      <FloatingMenuBar />
-      <ThemeToggle />
+      <FloatingMenuBar /> 
     </>
   );
 }

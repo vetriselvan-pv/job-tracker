@@ -62,8 +62,9 @@ const FloatingMenuBar = () => {
 
   const handleLogout = () => {
     auth.logout();
-    navigate("/");
+    navigate("/login");
   };
+
 
   const isActive = (path: string) => location.pathname === path;
 

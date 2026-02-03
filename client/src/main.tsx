@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login.tsx";
 import Register from "./pages/Register.tsx";
 import TestTable from "./pages/TestTable.tsx";
@@ -17,8 +17,10 @@ createRoot(document.getElementById("root")!).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route index element={<Login />} />
+            <Route index element={<Navigate to="/dashboard" replace />} />
+            <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+
             <Route path="test-table" element={<TestTable />} />
 
             {/* ProtectedRoute */}

@@ -155,14 +155,18 @@ const Dashboard = () => {
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header & Actions */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div>
-            <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
-              Jobs Applied
-            </h1>
-            <p className="text-slate-500 mt-2 font-medium text-lg">
-              Manage and track your job applications in one place.
-            </p>
+          <div className="flex items-center gap-4">
+            <img src="/logo.png" alt="Logo" className="w-12 h-12 object-contain" />
+            <div>
+              <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
+                Jobs Applied
+              </h1>
+              <p className="text-slate-500 mt-1 font-medium text-lg">
+                Manage and track your job applications.
+              </p>
+            </div>
           </div>
+
 
           <div className="flex items-center gap-4">
             <button

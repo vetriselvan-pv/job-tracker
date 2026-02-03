@@ -143,16 +143,20 @@ const AddJob = () => {
 
         <div className="bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden">
           <div className="p-8 md:p-12">
-            <div className="mb-10">
-              <h1 className="text-3xl font-black text-slate-900 tracking-tight">
-                {isEditMode ? "Modify Application" : "Add New Application"}
-              </h1>
-              <p className="text-slate-500 mt-2 font-medium">
-                {isEditMode 
-                  ? "Update the details of your job application."
-                  : "Enter the details of your job application to start tracking."}
-              </p>
+            <div className="mb-10 flex items-center gap-4">
+              <img src="/logo.png" alt="Logo" className="w-12 h-12 object-contain" />
+              <div>
+                <h1 className="text-3xl font-black text-slate-900 tracking-tight">
+                  {isEditMode ? "Modify Application" : "Add New Application"}
+                </h1>
+                <p className="text-slate-500 mt-1 font-medium">
+                  {isEditMode 
+                    ? "Update the details of your job application."
+                    : "Enter the details of your job application to start tracking."}
+                </p>
+              </div>
             </div>
+
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
