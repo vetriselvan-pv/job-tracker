@@ -97,6 +97,18 @@ const FloatingMenuBar = () => {
           <PlusIcon />
         </button>
 
+        <button
+          onClick={() => navigate("/create-cover-letter")}
+          className={`p-3 rounded-full transition-all ${
+            isActive("/create-cover-letter")
+              ? "bg-brand-primary text-white shadow-lg shadow-brand-primary/20"
+              : "text-slate-400 hover:text-slate-900 hover:bg-slate-50"
+          }`}
+          title="Create Cover Letter"
+        >
+          <PlusIcon />
+        </button>
+
         {/* Divider */}
         <div className="w-[1px] h-6 bg-slate-200 mx-1" />
 

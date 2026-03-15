@@ -9,7 +9,7 @@ import ProtectedRoute from "./protected-route.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import AddJob from "./pages/AddJob.tsx";
 import { AuthProvider } from "./auth-context.tsx";
-
+import CreateCoverLetter from "./pages/CreateCoverLetter.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -28,6 +28,7 @@ createRoot(document.getElementById("root")!).render(
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="add-job" element={<AddJob />} />
               <Route path="edit-job/:id" element={<AddJob />} />
+              <Route path="create-cover-letter" element={<CreateCoverLetter />} />
             </Route>
 
           </Route>
