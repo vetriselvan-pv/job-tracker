@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import authRoutes from './modules/auth/auth.routes';
 import jobRoutes from './modules/job-tracker/job-tracker.routes';
 import coverLetterRoutes from './modules/cover-letter/cover-letter.routes';
+import interviewQuestionRoutes from './modules/interview-questions/interview-question.routes';
 
 dotenv.config();
 
@@ -15,7 +16,8 @@ app.use(express.json());
 // Routes
 app.use('/auth', authRoutes);
 app.use('/jobs', jobRoutes);
-app.use('/coverLetter',coverLetterRoutes)
+app.use('/coverLetter', coverLetterRoutes);
+app.use('/interview-questions', interviewQuestionRoutes);
 
 app.get('/', (req, res) => {
   res.send('Job Tracker Server API is running');

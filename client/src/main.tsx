@@ -10,6 +10,9 @@ import Dashboard from "./pages/Dashboard.tsx";
 import AddJob from "./pages/AddJob.tsx";
 import { AuthProvider } from "./auth-context.tsx";
 import CreateCoverLetter from "./pages/CreateCoverLetter.tsx";
+import InterviewQuestionList from "./pages/InterviewQuestionList.tsx";
+import CreateInterviewQuestion from "./pages/CreateInterviewQuestion.tsx";
+import InterviewQuestionDetail from "./pages/InterviewQuestionDetail.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -22,6 +25,10 @@ createRoot(document.getElementById("root")!).render(
             <Route path="register" element={<Register />} />
 
             <Route path="test-table" element={<TestTable />} />
+            <Route path="interview-questions" element={<InterviewQuestionList />} />
+            <Route path="interview-questions/new" element={<CreateInterviewQuestion />} />
+            <Route path="interview-questions/:id" element={<InterviewQuestionDetail />} />
+            <Route path="interview-questions/:id/edit" element={<CreateInterviewQuestion />} />
 
             {/* ProtectedRoute */}
             <Route element={<ProtectedRoute />}>
